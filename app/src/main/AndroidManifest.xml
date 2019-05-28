@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user.project">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Utils.Profile.NewAskActivity"></activity>
+        <activity android:name=".Utils.Profile.NewBidActivity" />
+        <activity
+            android:name=".Utils.Home.SearchableActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value=".SearchableActivity" />
+
+        <activity android:name=".Utils.Detail.DetailActivity" />
+        <activity android:name=".Utils.Home.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Utils.Cart.CartActivity" />
+        <activity android:name=".Utils.Profile.ProfileActivity" />
+        <activity android:name=".Utils.Notification.NotificationActivity" />
+        <activity android:name=".Utils.Profile.AccountSettingActivity" />
+        <activity android:name=".Utils.Detail.SellActivity" />
+    </application>
+
+</manifest>

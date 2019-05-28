@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Footprint</string>
+    <string name="userID">Account ID / Email</string>
+    <string name="lg">LOGIN</string>
+    <string name="ps">Password</string>
+    <string name="forgetPS">忘記密碼</string>
+    <string name="edit_profile_fragment">Edit Profile</string>
+    <string name="sign_out_fragment">Sign Out</string>
+    <string name="search_title">Search</string>
+    <string-array name="shoesize">
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+    </string-array>
+</resources>

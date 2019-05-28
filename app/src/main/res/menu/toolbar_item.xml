@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/size_menu"
+        android:actionLayout="@layout/myspinner"
+        android:orderInCategory="1"
+        android:title="Select"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/my_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search_title"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="ifRoom" />
+
+</menu>

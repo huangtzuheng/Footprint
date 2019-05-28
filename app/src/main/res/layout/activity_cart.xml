@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/layout_center_cart" />
+
+
+        <Button
+            android:id="@+id/cart_Recycle_Refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottombar"
+            android:text="重新整理" />
+
+        <include layout="@layout/bottom" />
+
+
+        <ProgressBar
+            android:id="@+id/profileProgressBar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+</RelativeLayout>
