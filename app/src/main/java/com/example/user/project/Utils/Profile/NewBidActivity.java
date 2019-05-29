@@ -18,12 +18,16 @@ import com.example.user.project.Item;
 import com.example.user.project.ItemDAO;
 import com.example.user.project.R;
 
+import java.util.List;
+
 public class NewBidActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText picture, title, price, description;
     private Button post;
     final String[] sizeTable = {"5", "6", "7", "8", "9", "10", "11", "12", "13"};
-    private String data_picture, data_title, data_price, data_size, data_description;
-    public String tempSize;
+    final int[] intTable = {5, 6, 7, 8, 9, 10, 11, 12, 13};
+    public String data_picture, data_title, data_description;
+    public int data_price, data_size;
+    public int tempSize;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +45,7 @@ public class NewBidActivity extends AppCompatActivity implements View.OnClickLis
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                tempSize = sizeTable[i];
+                tempSize = intTable[i];
             }
 
             @Override
@@ -67,10 +71,13 @@ public class NewBidActivity extends AppCompatActivity implements View.OnClickLis
         if (!TextUtils.isEmpty(picture.getText()) && !TextUtils.isEmpty(title.getText()) && !TextUtils.isEmpty(price.getText()) && !TextUtils.isEmpty(description.getText())) {
             data_picture = picture.getText().toString();
             data_title = title.getText().toString();
-            data_price = price.getText().toString();
+            data_price = Integer.parseInt(price.getText().toString());
             data_size = tempSize;
             data_description = description.getText().toString();
 
+            Item item = new Item(0, data_title, data_price, data_size, data_description, data_picture, 3);
+            ItemDAO itemDAO = new ItemDAO(getApplicationContext());
+            itemDAO.insert(item);
 
             Intent profile = new Intent(this, ProfileActivity.class);
             startActivity(profile);

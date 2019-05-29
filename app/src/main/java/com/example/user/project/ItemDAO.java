@@ -27,9 +27,9 @@ public class ItemDAO {
     public static final String ITEM_PICTURE = "item_picture";
     public static final String USER_ID = "user_id";
 
-    public static final String[] COLUMNS = {KEY_ID, ITEM_TITLE, ITEM_PRICE,ITEM_SIZE,ITEM_DESCRIPTION,ITEM_PICTURE,USER_ID};
+    public static final String[] COLUMNS = {KEY_ID, ITEM_TITLE, ITEM_PRICE, ITEM_SIZE, ITEM_DESCRIPTION, ITEM_PICTURE, USER_ID};
 
-    public static final String[]SHOW_COLUMNS ={KEY_ID, ITEM_TITLE, ITEM_PRICE,ITEM_SIZE,ITEM_DESCRIPTION,ITEM_PICTURE,USER_ID };
+    public static final String[] SHOW_COLUMNS = {KEY_ID, ITEM_TITLE, ITEM_PRICE, ITEM_SIZE, ITEM_DESCRIPTION, ITEM_PICTURE, USER_ID};
 
 
     // 使用上面宣告的變數建立表格的SQL指令
@@ -47,12 +47,15 @@ public class ItemDAO {
     private SQLiteDatabase db;
 
     // 建構子，一般的應用都不需要修改
-    public ItemDAO(Context context) { db = MyDBHelper.getDatabase(context); }
+    public ItemDAO(Context context) {
+        db = MyDBHelper.getDatabase(context);
+    }
 
     // 關閉資料庫，一般的應用都不需要修改
     public void close() {
         db.close();
     }
+
     // 新增參數指定的物件
     public Item insert(Item item) {
         // 建立準備新增資料的ContentValues物件
@@ -99,18 +102,18 @@ public class ItemDAO {
         // 設定修改資料的條件為編號
         // 格式為「欄位名稱＝資料」
         String where = KEY_ID + "=" + item.getId();
-        Log.i("SQL Command",where);
+        Log.i("SQL Command", where);
 
         // 執行修改資料並回傳修改的資料數量是否成功
         return db.update(TABLE_NAME, cv, where, null) > 0;
     }
 
     // 刪除參數指定編號的資料
-    public boolean delete(long id){
+    public boolean delete(long id) {
         // 設定條件為編號，格式為「欄位名稱=資料」
         String where = KEY_ID + "=" + id;
         // 刪除指定編號資料並回傳刪除是否成功
-        return db.delete(TABLE_NAME, where , null) > 0;
+        return db.delete(TABLE_NAME, where, null) > 0;
     }
 
     // 讀取所有記事資料
@@ -149,7 +152,7 @@ public class ItemDAO {
         return item;
     }
 
-    public List<Item> getByUID(long uid){
+    public List<Item> getByUID(long uid) {
         List<Item> result = new ArrayList<>();
 
         String where = USER_ID + "=" + uid;
@@ -197,10 +200,10 @@ public class ItemDAO {
 
     // 建立範例資料
     public void sample() {
-        Item item = new Item(0,"NIKE",5000, 10, "9成新","https://upload.cc/i1/2019/05/26/XKwfqv.jpg",1);
-        Item item2 = new Item(0,"ADIDAS",7000, 9, "穿過1,2次","https://upload.cc/i1/2019/05/29/QT5Mu9.jpg",2);
-        Item item3 = new Item(0,"ADIDAS",7200, 7, "","https://upload.cc/i1/2019/05/29/JnSLIB.jpg",3);
-        Item item4 = new Item(0,"LOTTO.",6000, 10, "全新","https://upload.cc/i1/2019/05/26/MlEmaZ.jpg",4);
+        Item item = new Item(0, "NIKE", 5000, 10, "9成新", "https://upload.cc/i1/2019/05/26/XKwfqv.jpg", 1);
+        Item item2 = new Item(0, "ADIDAS", 7000, 9, "穿過1,2次", "https://upload.cc/i1/2019/05/29/QT5Mu9.jpg", 2);
+        Item item3 = new Item(0, "ADIDAS", 7200, 7, "", "https://upload.cc/i1/2019/05/29/JnSLIB.jpg", 3);
+        Item item4 = new Item(0, "LOTTO.", 6000, 10, "全新", "https://upload.cc/i1/2019/05/26/MlEmaZ.jpg", 4);
         insert(item);
         insert(item2);
         insert(item3);
