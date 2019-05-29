@@ -102,7 +102,6 @@
 
                 </LinearLayout>
 
-
                 <TextView
                     android:id="@+id/profile_phone"
                     android:layout_width="match_parent"
@@ -111,7 +110,6 @@
                     android:text="Where is my gaunlet?"
                     android:textColor="@color/theOrange"
                     android:textSize="16sp" />
-
             </LinearLayout>
 
             <LinearLayout

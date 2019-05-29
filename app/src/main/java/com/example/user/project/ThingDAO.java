@@ -202,10 +202,10 @@ public class ThingDAO {
 
     // 建立範例資料
     public void sample() {
-        Item item4 = new Item(0,"ASICS.",3100, 10, "跪求","https://upload.cc/i1/2019/05/27/zhbClL.jpg",1);
-        Item item5 = new Item(0,"LI-NING",6200, 6, "二手也收","https://upload.cc/i1/2019/05/27/zhbClL.jpg",3);
-        Item item6 = new Item(0,"FILA",5300, 7, "希望全新","https://upload.cc/i1/2019/05/27/zhbClL.jpg",4);
-        Item item7 = new Item(0,"PUMA",3400, 9, "求各位大大","https://upload.cc/i1/2019/05/27/zhbClL.jpg",2);
+        Item item4 = new Item(0,"NIKE",25500, 10, "跪求","https://upload.cc/i1/2019/05/29/TjyfHw.jpg",1);
+        Item item5 = new Item(0,"Yeezy Boost",7400, 6, "二手也收","https://upload.cc/i1/2019/05/29/Gca3zg.jpg",3);
+        Item item6 = new Item(0,"Balenciaga",22500, 7, "希望全新","https://upload.cc/i1/2019/05/29/O3poEC.jpg",4);
+        Item item7 = new Item(0,"NIKE",17000, 9, "求各位大大","https://upload.cc/i1/2019/05/29/cbmpoL.jpg",2);
         insert(item4);
         insert(item5);
         insert(item6);

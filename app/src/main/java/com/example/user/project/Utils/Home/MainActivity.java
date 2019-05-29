@@ -26,6 +26,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -108,12 +109,13 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         mToolbar = (Toolbar) findViewById(R.id.tb_home);
 
 
-        SpannableString title = new SpannableString("Foot print");
-        int theOrange = Color.parseColor("#ff9900");
-        title.setSpan(new BackgroundColorSpan(theOrange), 5, 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        title.setSpan(new ForegroundColorSpan(Color.WHITE), 0, 4, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
-        mToolbar.setTitle(title);
+//        SpannableString title = new SpannableString("Foot print");
+//        int theOrange = Color.parseColor("#ff9900");
+//        title.setSpan(new BackgroundColorSpan(theOrange), 5, 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+//        title.setSpan(new ForegroundColorSpan(Color.WHITE), 0, 4, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+//        mToolbar.setTitle(title);
         setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle(null);
 
 
     }
@@ -211,6 +213,7 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
 
         // 這邊讓icon可以還原到搜尋的icon
         searchView.setIconifiedByDefault(true);
+
         // spinner
         Spinner sizeSelect = (Spinner) menu.findItem(R.id.size_menu)
                 .setActionView(R.layout.myspinner)

@@ -66,7 +66,7 @@ public class SellActivity extends AppCompatActivity {
                     Long thisID = Long.valueOf(nGoodID.getText().toString());
 
                     SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                    String currentCart = prefs.getString("CartList","");
+                    String currentCart = prefs.getString("NotifList","");
 
                     if(currentCart.length() > 0){
                         currentCart += "," + String.valueOf(thisID);
@@ -74,10 +74,10 @@ public class SellActivity extends AppCompatActivity {
                         currentCart = String.valueOf(thisID);
                     }
 
-                    prefs.edit().putString("CartList",currentCart).commit();
+                    prefs.edit().putString("NotifList",currentCart).commit();
 
 
-                    Toast toast = Toast.makeText(getApplicationContext(),"商品編號("+thisID + ") 請去通知確認!", Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(getApplicationContext(),"商品編號("+thisID + ") 已購買!", Toast.LENGTH_SHORT);
                     toast.show();
                 }
 

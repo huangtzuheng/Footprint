@@ -10,27 +10,45 @@
     android:weightSum="1"
     tools:context=".LoginActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="登入"
-        android:textColor="#FF9800"
-        android:textSize="36sp" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Foot"
+            android:textColor="@color/white"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/title_layout"
+            android:text="print"
+            android:textColor="@color/black"
+            android:textSize="36sp" />
+    </LinearLayout>
+
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="103dp"
+        android:layout_height="92dp"
         android:layout_margin="20pt"
         android:scaleType="center"
-        android:src="@drawable/ntust" />
+        android:src="@drawable/logo" />
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:text="帳號 "
+        android:text="ID "
         android:textColor="@color/theOrange"
         android:textSize="24sp" />
 
@@ -46,7 +64,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="密碼"
+        android:text="Password"
         android:textColor="@color/theOrange"
         android:textSize="24sp" />
 

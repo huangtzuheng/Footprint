@@ -43,7 +43,7 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.CartA
 
         setupBottomNavigationView();
 
-        prefs =  PreferenceManager.getDefaultSharedPreferences(this);
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.rv_cart);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
@@ -51,8 +51,8 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.CartA
         mRecyclerView.setHasFixedSize(true);
 
 
-        Button bt_refresh =  (Button) findViewById(R.id.cart_Recycle_Refresh);
-        bt_refresh.setOnClickListener(new Button.OnClickListener(){
+        Button bt_refresh = (Button) findViewById(R.id.cart_Recycle_Refresh);
+        bt_refresh.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ArrayList<Item> cart = getCartCookie();
@@ -65,19 +65,17 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.CartA
 //                Toast toast = Toast.makeText(v.getContext(),"XXX", Toast.LENGTH_SHORT);
 //                toast.show();
             }
-         });
+        });
 
         //================== Get Cart Item Data ===================
         ArrayList<Item> cart = getCartCookie();
-        if(cart != null){
+        if (cart != null) {
 
-            mCartAdapter = new CartAdapter(cart,this);
+            mCartAdapter = new CartAdapter(cart, this);
             mRecyclerView.setAdapter(mCartAdapter);
-        }else{
+        } else {
 
         }
-
-
 
 
     }
@@ -91,40 +89,40 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.CartA
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
     }
+
     public void onClick(String thisGood) {
         Intent detailIntent = new Intent(this, DetailActivity.class);
         detailIntent.putExtra(Intent.EXTRA_TEXT, thisGood);
         startActivity(detailIntent);
     }
 
-    public ArrayList<Item> getCartCookie(){
-        ArrayList<Item> cartList = new  ArrayList<Item>();
+    public ArrayList<Item> getCartCookie() {
+        ArrayList<Item> cartList = new ArrayList<Item>();
 
 
         String CartList = prefs.getString("CartList", "");
-        Log.i("CartList",CartList);
+        Log.i("CartList", CartList);
 
-        if(CartList.length() > 0){
+        if (CartList.length() > 0) {
             ItemDAO itemTable = new ItemDAO(this);
             String CartArray[] = CartList.split(",");
 
-            for(String thisID_Str: CartArray){
+            for (String thisID_Str : CartArray) {
                 Long thisID_Long = Long.valueOf(thisID_Str);
                 Item thisItem = itemTable.get(thisID_Long);
                 cartList.add(thisItem);
             }
 
             return cartList;
-        }else{
-            return  null;
+        } else {
+            return null;
         }
-
 
 
     }
 
-    public void refresh(ArrayList<Item> cart){
-        mCartAdapter = new CartAdapter(cart,this);
+    public void refresh(ArrayList<Item> cart) {
+        mCartAdapter = new CartAdapter(cart, this);
         mRecyclerView.setAdapter(mCartAdapter);
     }
 

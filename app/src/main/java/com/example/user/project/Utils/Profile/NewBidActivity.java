@@ -14,6 +14,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.user.project.Item;
+import com.example.user.project.ItemDAO;
 import com.example.user.project.R;
 
 public class NewBidActivity extends AppCompatActivity implements View.OnClickListener {
@@ -68,6 +70,8 @@ public class NewBidActivity extends AppCompatActivity implements View.OnClickLis
             data_price = price.getText().toString();
             data_size = tempSize;
             data_description = description.getText().toString();
+
+
             Intent profile = new Intent(this, ProfileActivity.class);
             startActivity(profile);
             Toast.makeText(this, "Post Succeed", Toast.LENGTH_LONG).show();

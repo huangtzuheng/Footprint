@@ -11,7 +11,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:gravity="center"
-            android:text="Notification"
+            android:text="Selling"
             android:textColor="@color/lightGray"
             android:textSize="30dp"
             tools:ignore="RtlCompat" />

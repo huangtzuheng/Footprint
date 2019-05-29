@@ -198,8 +198,8 @@ public class ItemDAO {
     // 建立範例資料
     public void sample() {
         Item item = new Item(0,"NIKE",5000, 10, "9成新","https://upload.cc/i1/2019/05/26/XKwfqv.jpg",1);
-        Item item2 = new Item(0,"ADIDAS",2200, 9, "穿過1.2次","https://upload.cc/i1/2019/05/26/ZgCW2v.jpg",2);
-        Item item3 = new Item(0,"DIADORA",3000, 7, "","https://upload.cc/i1/2019/05/26/p8BSAF.jpg",3);
+        Item item2 = new Item(0,"ADIDAS",7000, 9, "穿過1,2次","https://upload.cc/i1/2019/05/29/QT5Mu9.jpg",2);
+        Item item3 = new Item(0,"ADIDAS",7200, 7, "","https://upload.cc/i1/2019/05/29/JnSLIB.jpg",3);
         Item item4 = new Item(0,"LOTTO.",6000, 10, "全新","https://upload.cc/i1/2019/05/26/MlEmaZ.jpg",4);
         insert(item);
         insert(item2);

@@ -212,7 +212,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/theOrange"
-            android:text="Sell to Him/Her"
+            android:text="Sell This"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="20sp" />

@@ -28,7 +28,7 @@
                     android:layout_marginRight="1dp"
                     android:layout_weight="1"
                     android:background="@color/theOrange"
-                    android:text="重新整理"
+                    android:text="Refresh"
                     android:textColor="@color/black" />
 
                 <Button
@@ -37,7 +37,7 @@
                     android:layout_marginLeft="1dp"
                     android:layout_weight="1"
                     android:background="@color/theOrange"
-                    android:text="購買"
+                    android:text="Purshase"
                     android:textColor="@color/black" />
             </LinearLayout>
 
