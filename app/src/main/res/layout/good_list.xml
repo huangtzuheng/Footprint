@@ -6,14 +6,15 @@
     android:layout_height="300dp"
     android:layout_margin="3dp"
     android:padding="6dp"
-    app:cardElevation="6dp"
-    app:cardCornerRadius="0dp">
+    app:cardCornerRadius="0dp"
+    app:cardElevation="6dp">
 
     <LinearLayout
         android:id="@+id/ll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <ImageView
             android:id="@+id/iv_goodList"
             android:layout_width="match_parent"
@@ -23,9 +24,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/black"
             android:orientation="vertical"
-            android:padding="5dp"
-            android:background="@color/black">
+            android:padding="5dp">
 
 
             <LinearLayout
@@ -37,17 +38,17 @@
                     android:id="@+id/tv_good_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15dp"
                     android:text="商品名稱"
-                    android:textStyle="bold"
-                    android:textColor="@color/theOrange" />
+                    android:textColor="@color/theOrange"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="("
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="5dp"
+                    android:text="("
                     android:textColor="@color/theOrange" />
 
                 <TextView
@@ -60,8 +61,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=")"
                     android:layout_marginLeft="5dp"
+                    android:text=")"
                     android:textColor="@color/theOrange" />
 
             </LinearLayout>
@@ -69,45 +70,46 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingLeft="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="NT."
                     android:layout_marginRight="5dp"
-                    android:textSize="16dp"
-                    android:textColor="@color/theOrange" />
+                    android:text="NT."
+                    android:textColor="@color/theOrange"
+                    android:textSize="16dp" />
 
                 <TextView
                     android:id="@+id/tv_good_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="4200"
-                    android:textSize="16dp"
-                    android:textColor="@color/theOrange" />
+                    android:textColor="@color/theOrange"
+                    android:textSize="16dp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
                 <TextView
                     android:id="@+id/tv_good_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="42"
-                    android:textColor="@color/theOrange_light" />
+                    android:textColor="@color/white" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="號"
                     android:layout_marginLeft="5dp"
-                    android:textColor="@color/theOrange_light" />
+                    android:text="號"
+                    android:textColor="@color/white" />
             </LinearLayout>
 
             <TextView
@@ -116,11 +118,10 @@
                 android:layout_height="match_parent"
                 android:paddingLeft="15dp"
                 android:text="我是商品的描述我是商品的描述我是商品的描述我是商品的描述我是商品的描述我是商品的描述我是商品的描述我是商品的描述"
-                android:textColor="@color/theOrange_light" />
+                android:textColor="@color/white" />
 
 
         </LinearLayout>
-
 
 
     </LinearLayout>

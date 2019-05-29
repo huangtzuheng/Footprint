@@ -100,8 +100,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         tv_selling.setOnClickListener(new TextView.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv_buying.setTextColor(Color.parseColor("#666666"));
-                tv_selling.setTextColor(Color.parseColor("#77a9f9"));
+                tv_buying.setTextColor(Color.parseColor("#cacaca"));
+                tv_selling.setTextColor(Color.parseColor("#ff9900"));
                 tv_buying.setTypeface(null, Typeface.NORMAL);
                 tv_selling.setTypeface(null, Typeface.BOLD);
                 getMySellingData();
@@ -112,8 +112,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         tv_buying.setOnClickListener(new TextView.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv_buying.setTextColor(Color.parseColor("#77a9f9"));
-                tv_selling.setTextColor(Color.parseColor("#666666"));
+                tv_buying.setTextColor(Color.parseColor("#ff9900"));
+                tv_selling.setTextColor(Color.parseColor("#cacaca"));
                 tv_buying.setTypeface(null, Typeface.BOLD);
                 tv_selling.setTypeface(null, Typeface.NORMAL);
                 tempGridSetup();

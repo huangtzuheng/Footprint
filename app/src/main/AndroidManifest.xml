@@ -12,8 +12,18 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".Utils.Profile.NewAskActivity"></activity>
         <activity android:name=".Utils.Profile.NewBidActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Utils.Home.SearchableActivity"
             android:launchMode="singleTop"

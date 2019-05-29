@@ -12,7 +12,7 @@
             android:layout_height="fill_parent"
             android:gravity="center"
             android:text="Notification"
-            android:textColor="@color/black"
+            android:textColor="@color/lightGray"
             android:textSize="30dp"
             tools:ignore="RtlCompat" />
 

@@ -9,8 +9,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.user.project.Utils.Home.MainActivity;
+
 public class LoginActivity extends AppCompatActivity {
-    private EditText login_name,login_password;
+    private EditText login_name, login_password;
     private int counter = 3;
 
     @Override
@@ -23,16 +25,18 @@ public class LoginActivity extends AppCompatActivity {
 //        login_name.setText(name_str);
 //        login_password.setText(pass_str);
     }
-    public void forgetPS(View view){
+
+    public void forgetPS(View view) {
         AlertDialog ag = new AlertDialog.Builder(this)
                 .setTitle("密碼提示")
                 .setMessage("4321")
                 .setPositiveButton("OK", null)
-                .show();}
+                .show();
+    }
 
     public void sendString(View view) {
 
-        Intent intent = new Intent(this, Login2Activity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         login_name = (EditText) findViewById(R.id.input_email);
         login_password = (EditText) findViewById(R.id.input_password);
         String stringID = login_name.getText().toString();
@@ -41,8 +45,9 @@ public class LoginActivity extends AppCompatActivity {
 //            Toast t =new Toast.makeText(this, "登入成功", Toast.LENGTH_LONG).show();
             intent.putExtra("userID", stringID);
             intent.putExtra("userPS", seringPS);
-            SharedPreferences remdname=getPreferences(LoginActivity.MODE_PRIVATE);
-            SharedPreferences.Editor edit=remdname.edit();
+            intent.putExtra("loginstatue", true);
+            SharedPreferences remdname = getPreferences(LoginActivity.MODE_PRIVATE);
+            SharedPreferences.Editor edit = remdname.edit();
             edit.putString("name", login_name.getText().toString());
             edit.putString("pass", login_password.getText().toString());
             edit.commit();
@@ -62,26 +67,29 @@ public class LoginActivity extends AppCompatActivity {
 
         }
     }
-    protected void onPause(){
+
+    protected void onPause() {
         super.onPause();
-        SharedPreferences remdname=getPreferences(LoginActivity.MODE_PRIVATE);
-        SharedPreferences.Editor edit=remdname.edit();
+        SharedPreferences remdname = getPreferences(LoginActivity.MODE_PRIVATE);
+        SharedPreferences.Editor edit = remdname.edit();
         edit.putString("name", login_name.getText().toString());
         edit.putString("pass", login_password.getText().toString());
         edit.commit();
 
 
     }
-    public boolean login(String id,String ps){
-        if (id.equals("ntust") && ps.equals("1234")){ //登入成功
+
+    public boolean login(String id, String ps) {
+        if (id.equals("ntust") && ps.equals("1234")) { //登入成功
             Toast.makeText(this, "登入成功", Toast.LENGTH_LONG).show();
             return true;
-        }else {
+        } else {
             AlertDialog ag = new AlertDialog.Builder(this)
                     .setTitle("WARING")
                     .setMessage("登入失敗")
                     .setPositiveButton("OK", null)
                     .show();
-            return false;}
+            return false;
+        }
     }
 }

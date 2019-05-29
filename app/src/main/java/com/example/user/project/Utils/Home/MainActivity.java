@@ -52,14 +52,15 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     private RecyclerView mRecyclerView;
     private GoodAdapter mGoodAdapter;
     public String[] testData = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"};
-//    private SpannableString title;
+    //    private SpannableString title;
     private Toolbar mToolbar;
     private ViewPager mViewPager;
     private TabLayout mTabLayout;
     private BidFragment bid = new BidFragment();
     private AskFragment ask = new AskFragment();
-final String[] shoesizetable={"6","7","8","9","10","11","12"};
-private double shoeselectsize;
+    final String[] shoesizetable = {"5", "6", "7", "8", "9", "10", "11", "12", "13"};
+    private double shoeselectsize;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,8 +70,8 @@ private double shoeselectsize;
 
         //====== Initial Database =========
 
-        ItemDAO testI =new ItemDAO(MainActivity.this);
-        ThingDAO testT =new ThingDAO(MainActivity.this);
+        ItemDAO testI = new ItemDAO(MainActivity.this);
+        ThingDAO testT = new ThingDAO(MainActivity.this);
         UserDAO testU = new UserDAO(MainActivity.this);
         // 如果資料庫是空的，就建立一些範例資料
         // 這是為了方便測試用的，完成應用程式以後可以拿掉
@@ -87,7 +88,6 @@ private double shoeselectsize;
             testT.sample();
 
         }
-
 
 
         testI.close();
@@ -108,11 +108,10 @@ private double shoeselectsize;
         mToolbar = (Toolbar) findViewById(R.id.tb_home);
 
 
-
         SpannableString title = new SpannableString("Foot print");
         int theOrange = Color.parseColor("#ff9900");
-        title.setSpan(new BackgroundColorSpan(theOrange),5,10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        title.setSpan(new ForegroundColorSpan(Color.WHITE),0,4, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        title.setSpan(new BackgroundColorSpan(theOrange), 5, 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        title.setSpan(new ForegroundColorSpan(Color.WHITE), 0, 4, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
         mToolbar.setTitle(title);
         setSupportActionBar(mToolbar);
 
@@ -250,6 +249,7 @@ private double shoeselectsize;
 //        searchView.setOnQueryTextListener(queryTextListener);
         return super.onCreateOptionsMenu(menu);
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -258,7 +258,6 @@ private double shoeselectsize;
         }
         return super.onOptionsItemSelected(item);
     }
-
 
 
 }

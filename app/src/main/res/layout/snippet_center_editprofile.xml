@@ -17,7 +17,7 @@
                 android:layout_height="120dp"
                 android:id="@+id/profile_photo"
                 android:layout_marginTop="20dp"
-                app:civ_border_color="@color/black"
+                app:civ_border_color="@color/white"
                 app:civ_border_width="2dp"
                 android:layout_centerHorizontal="true" />
             <TextView
@@ -36,7 +36,7 @@
                 android:layout_height="50dp"
                 android:layout_below="@+id/changeProfilePhoto"
                 android:layout_marginTop="40dp"
-                android:background="@drawable/grey_border_bottem"
+                android:background="@color/white"
                 android:id="@+id/relLayout1">
                 <ImageView
                     android:layout_width="35dp"
@@ -60,7 +60,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_below="@id/relLayout1"
-                    android:background="@drawable/grey_border_bottem"
+                    android:background="@color/white"
                     android:id="@+id/relLayout2">
 
                     <ImageView
@@ -87,7 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_below="@id/relLayout2"
-                android:background="@drawable/grey_border_bottem"
+                android:background="@color/white"
                 android:id="@+id/relLayout3"
                 >
                 <ImageView
@@ -117,14 +117,14 @@
                 android:textColor="@color/black"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
-                android:background="@drawable/grey_border_bottem"
+                android:background="@color/white"
                 android:id="@+id/textPrivateInfo" />
             <!-- email display -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_below="@id/textPrivateInfo"
-                android:background="@drawable/grey_border_bottem"
+                android:background="@color/white"
                 android:id="@+id/relLayout4"
                 android:layout_marginTop="10dp">
                 <ImageView
@@ -150,7 +150,7 @@
                 android:layout_height="50dp"
                 android:layout_below="@id/relLayout4"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/grey_border_bottem"
+                android:background="@color/white"
                 android:id="@+id/relLayout5"
                 >
                 <ImageView

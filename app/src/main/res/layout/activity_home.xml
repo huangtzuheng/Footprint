@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorPrimary"
+    android:background="@color/black"
     tools:context=".Utils.Home.MainActivity">
 
     <RelativeLayout
@@ -28,7 +28,6 @@
             android:layout_below="@+id/relLayout1">
 
             <include layout="@layout/middle" />
-
 
 
         </RelativeLayout>

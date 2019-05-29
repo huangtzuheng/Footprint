@@ -72,7 +72,7 @@ public class AccountSettingActivity extends AppCompatActivity {
         options.add(getString(R.string.edit_profile_fragment)); //fragment 0
         options.add(getString(R.string.sign_out_fragment)); //fragment 1
 
-        ArrayAdapter adapter = new ArrayAdapter(mContext, android.R.layout.simple_list_item_1, options);
+        ArrayAdapter adapter = new ArrayAdapter<String>(mContext, R.layout.list_white_text, R.id.list_content, options);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

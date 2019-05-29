@@ -6,7 +6,7 @@
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@drawable/white_grey_border_bottom">
+        android:background="@color/darkGray">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/profileToolBar"
@@ -33,7 +33,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:text="Edit Profile"
-                    android:textColor="@color/black"
+                    android:textColor="@color/lightGray"
                     android:textSize="20sp"
                     android:id="@+id/profileName"
                     tools:ignore="RtlCompat" />
